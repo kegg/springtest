@@ -12,4 +12,7 @@ public class Json {
   @NonNull
   private String lastName;
   
+  @NonNull
+  private int age;
+  
 }
