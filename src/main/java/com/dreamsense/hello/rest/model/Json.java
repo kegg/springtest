@@ -1,21 +1,15 @@
 package com.dreamsense.hello.rest.model;
 
+import lombok.Data;
+import lombok.NonNull;
+
+@Data(staticConstructor = "of")
 public class Json {
   
+  @NonNull
   private String firstName;
+  
+  @NonNull
   private String lastName;
-
-  public String getFirstName() {
-    return firstName;
-  }
-  
-  public String getLastName() {
-    return lastName;  
-  }
-  
-  public Json(String firstName, String lastName) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-  }
   
 }

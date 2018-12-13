@@ -21,8 +21,8 @@ public class HelloController {
     @RequestMapping(value = "/json", produces = { "application/json"})
     public List<Json> json() {
       List<Json> jsonList = new ArrayList();
-      jsonList.add(new Json("Fred", "Jones"));
-      jsonList.add(new Json("John", "Smith"));
+      jsonList.add(Json.of("Fred", "Jones"));
+      jsonList.add(Json.of("John", "Smith"));
       
       return jsonList;
     }
