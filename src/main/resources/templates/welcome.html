@@ -7,5 +7,9 @@
 <body>
     <p th:text="'Message: ' + ${message} + '!'" />
     <p><a th:href="${url}" th:text="${url}" /></p>
+    
+    <ul>
+      <li th:each="li : ${list}" th:text="${li}"/>
+    </ul>
 </body>
 </html>

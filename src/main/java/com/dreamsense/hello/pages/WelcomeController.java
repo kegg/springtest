@@ -22,6 +22,10 @@ public class WelcomeController {
 	public String welcome(Map<String, Object> model) {
 		model.put("message", this.message);
 		model.put("url", URI.create(this.serviceUrl));
+		
+		String[] list = {"One","Two","Three"};
+		model.put("list", list);
+		
 		return "welcome";
 	}
 
