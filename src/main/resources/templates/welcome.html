@@ -11,5 +11,12 @@
     <ul>
       <li th:each="li : ${list}" th:text="${li}"/>
     </ul>
+    
+    <table>
+      <tr th:each="book : ${books}">
+        <td th:text="${book.title}"/>
+        <td th:text="${book.author}"/>
+      </tr>
+    </table>
 </body>
 </html>

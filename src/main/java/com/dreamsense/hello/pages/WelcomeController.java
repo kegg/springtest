@@ -1,12 +1,14 @@
 package com.dreamsense.hello.pages;
 
-import java.util.Map;
-
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import com.dreamsense.hello.pages.model.Book;
 
 import java.net.URI;
+import java.util.Map;
+import java.util.List;
+import java.util.ArrayList;
 
 @Controller
 public class WelcomeController {
@@ -25,6 +27,12 @@ public class WelcomeController {
 		
 		String[] list = {"One","Two","Three"};
 		model.put("list", list);
+		
+		List<Book> bookList = new ArrayList();
+		bookList.add(Book.of("The Bible", "God"));
+		bookList.add(Book.of("BofM", "Nephi"));
+		
+		model.put("books", bookList);
 		
 		return "welcome";
 	}
